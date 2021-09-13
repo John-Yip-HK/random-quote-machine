@@ -1,9 +1,18 @@
-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+$base-color: #444857;
+
+@mixin setColorForBgAndFont($bgColor, $fontColor) {
+  background: $bgColor;
+  color: $fontColor;
+}
+body {
+  @include setColorForBgAndFont($base-color, $base-color);
 
   height: 100vh;
+}
+
+a,
+#quote-box {
+  @include setColorForBgAndFont(white, $base-color);
 }
 
 a {
@@ -11,11 +20,9 @@ a {
 }
 
 #quote-box {
-  border: 1px solid black;
   border-radius: 0.5rem;
 
-  width: 35vw;
-  height: fit-content;
+  margin: 0 auto;
 
   padding: 1rem;
 }
@@ -28,6 +35,19 @@ a {
   text-align: center;
 }
 
+#author::before {
+  content: "-- ";
+}
+
 #author {
   text-align: right;
+}
+
+div[class*="align-self-center"] {
+  text-align: end;
+}
+
+#new-quote {
+  border-color: $base-color;
+  background: $base-color;
 }

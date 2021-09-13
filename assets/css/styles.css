@@ -1,9 +1,13 @@
-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
+body {
+  background: #444857;
+  color: #444857;
   height: 100vh;
+}
+
+a,
+#quote-box {
+  background: white;
+  color: #444857;
 }
 
 a {
@@ -11,12 +15,8 @@ a {
 }
 
 #quote-box {
-  border: 1px solid black;
   border-radius: 0.5rem;
-
-  width: 35vw;
-  height: fit-content;
-
+  margin: 0 auto;
   padding: 1rem;
 }
 
@@ -28,6 +28,21 @@ a {
   text-align: center;
 }
 
+#author::before {
+  content: "-- ";
+}
+
 #author {
   text-align: right;
 }
+
+div[class*=align-self-center] {
+  text-align: end;
+}
+
+#new-quote {
+  border-color: #444857;
+  background: #444857;
+}
+
+/*# sourceMappingURL=styles.css.map */

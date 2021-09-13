@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-  <main>
-    <div id="quote-box">
-      <h1 id="text">I am a quote</h1>
-      <h4 id="author">I am the author</h3>
+<body class="d-flex justify-content-center align-items-center">
+  <main class="col-12">
+    <div id="quote-box" class="col-10 col-md-6">
+      <h1 id="text"></h1>
+      <h6 id="author"></h6>
       <div class="row d-flex justify-content-between">
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <a href="https://twitter.com/intent/tweet" id="tweet-quote">
             <i class="fab fa-twitter-square fa-3x"></i>
           </a>
@@ -24,8 +24,13 @@
             <i class="fab fa-facebook-square fa-3x"></i>
           </a>
         </div>
-        <div class="col-3 align-self-center">
-          <button id="new-quote">New quote</button>
+        <div class="col-4 col-md-3 align-self-center">
+          <button 
+          type="button" 
+          id="new-quote" 
+          class="btn btn-primary"
+          onclick="getQuote()"
+          >New quote</button>
         </div>    
       </div>
     </div>
@@ -34,6 +39,7 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script src="assets/js/script.js"></script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 </html>
