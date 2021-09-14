@@ -1,18 +1,35 @@
-$base-color: #444857;
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$base-color: $gray-700;
+$listOfColors: (
+  $blue,
+  $indigo,
+  $purple,
+  $pink,
+  $red,
+  $orange,
+  $yellow,
+  $green,
+  $teal,
+  $cyan
+);
 
 @mixin setColorForBgAndFont($bgColor, $fontColor) {
   background: $bgColor;
   color: $fontColor;
 }
+
 body {
-  @include setColorForBgAndFont($base-color, $base-color);
+  @include setColorForBgAndFont($gray-700, $gray-700);
 
   height: 100vh;
 }
 
 a,
 #quote-box {
-  @include setColorForBgAndFont(white, $base-color);
+  @include setColorForBgAndFont(white, $gray-700);
 }
 
 a {
@@ -25,6 +42,12 @@ a {
   margin: 0 auto;
 
   padding: 1rem;
+}
+
+#text,
+#author {
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 #text::before {
@@ -48,6 +71,6 @@ div[class*="align-self-center"] {
 }
 
 #new-quote {
-  border-color: $base-color;
-  background: $base-color;
+  border-color: $gray-700;
+  background: $gray-700;
 }

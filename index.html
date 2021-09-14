@@ -12,16 +12,16 @@
 </head>
 <body class="d-flex justify-content-center align-items-center">
   <main class="col-12">
-    <div id="quote-box" class="col-10 col-md-6">
+    <div id="quote-box" class="col-10 col-md-5">
       <h1 id="text"></h1>
       <h6 id="author"></h6>
       <div class="row d-flex justify-content-between">
         <div class="col-6 col-md-4">
-          <a href="https://twitter.com/intent/tweet" id="tweet-quote">
+          <a id="tweet-quote" onclick="genPost(this)" target="_blank">
             <i class="fab fa-twitter-square fa-3x"></i>
           </a>
-          <a href="https://www.tumblr.com/widgets/share" id="facebook-quote">
-            <i class="fab fa-facebook-square fa-3x"></i>
+          <a id="tumblr-quote" onclick="genPost(this)" target="_blank">
+            <i class="fab fa-tumblr-square fa-3x"></i>
           </a>
         </div>
         <div class="col-4 col-md-3 align-self-center">
