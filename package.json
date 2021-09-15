@@ -15,9 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@popperjs/core": "^2.10.1",
-    "bootstrap": "^5.1.1",
-    "jquery": "^3.6.0"
+    "bootstrap": "^5.1.1"
   },
   "devDependencies": {
     "@clarencep/parallelshell": "^3.0.4",
