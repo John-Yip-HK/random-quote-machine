@@ -12,12 +12,12 @@
 </head>
 <body class="d-flex justify-content-center align-items-center">
   <main class="col-12">
-    <div id="quote-box" class="col-10 col-md-5">
+    <div id="quote-box" class="col-10 col-md-6">
       <h1 id="text"></h1>
       <h6 id="author"></h6>
-      <div class="row d-flex justify-content-between">
-        <div class="col-6 col-md-4">
-          <a id="tweet-quote" onclick="genPost(this)" target="_blank">
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-6 col-md-5">
+          <a id="tweet-quote" href="https://twitter.com/intent/tweet" onclick="genPost(this)" target="_blank">
             <i class="fab fa-twitter-square fa-3x"></i>
           </a>
           <a id="tumblr-quote" onclick="genPost(this)" target="_blank">
@@ -36,10 +36,8 @@
     </div>
   </main>
 
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="assets/js/script.js"></script>
-  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
