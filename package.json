@@ -13,6 +13,10 @@
   },
   "author": "John Yip",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/John-Yip-HK/random-quote-machine.git"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "bootstrap": "^5.1.1"
