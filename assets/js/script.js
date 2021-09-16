@@ -5,7 +5,6 @@ const authorElement = document.getElementById("author");
 const transitionDuration = 1; // in seconds
 
 let currColor = null;
-const baseColor = "#495057";
 let prevColorId = -1;
 const colors = [
   "#16a085",
@@ -98,14 +97,20 @@ const changeIconMargin = () => {
 
 // Init function.
 window.onload = () => {
-  document.body.style.transition = "background-color 1s, color 1s";
-  document.getElementById("quote-box").style.transition = "color 1s";
-  document.getElementById("new-quote").style.transition =
-    "background-color 1s, border-color 1s, opacity 0.3s";
-  textElement.style.transition = "opacity 1s";
-  authorElement.style.transition = "opacity 1s";
+  const bgTransition = `background-color ${transitionDuration}s`;
+  const fontColorTransition = `color ${transitionDuration}s`;
+  const borderColorTransition = `border-color ${transitionDuration}`;
+  const opacityTraisition = `opacity ${transitionDuration}s`;
+
+  document.body.style.transition = `${bgTransition}, ${fontColorTransition}`;
+  document.getElementById("quote-box").style.transition = fontColorTransition;
+  document.getElementById(
+    "new-quote"
+  ).style.transition = `${bgTransition}, ${borderColorTransition}, opacity 0.3s`;
+  textElement.style.transition = opacityTraisition;
+  authorElement.style.transition = opacityTraisition;
   for (let icon of document.getElementsByClassName("fab")) {
-    icon.style.transition = "opacity 0.3s, color 1s";
+    icon.style.transition = `opacity 0.3s, ${fontColorTransition}`;
   }
 
   window.addEventListener("resize", changeIconMargin);

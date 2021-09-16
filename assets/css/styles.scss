@@ -1,4 +1,6 @@
-$base-color: #495057;
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
 
 @mixin setColorForBgAndFont($bgColor, $fontColor) {
   background-color: $bgColor;
@@ -6,14 +8,14 @@ $base-color: #495057;
 }
 
 body {
-  @include setColorForBgAndFont($base-color, $base-color);
+  @include setColorForBgAndFont($gray-700, $gray-700);
 
   height: 100vh;
 }
 
 a,
 #quote-box {
-  @include setColorForBgAndFont(white, $base-color);
+  @include setColorForBgAndFont(white, $gray-700);
 }
 
 a {
@@ -59,7 +61,7 @@ i[class*="fab"]:hover {
 }
 
 #new-quote {
-  @include setColorForBgAndFont($base-color, white);
+  @include setColorForBgAndFont($gray-700, white);
 
-  border-color: $base-color;
+  border-color: $gray-700;
 }
