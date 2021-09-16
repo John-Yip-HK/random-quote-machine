@@ -103,7 +103,7 @@ window.onload = () => {
   const fontColorTransition = `color ${transitionDuration}s`;
   const borderColorTransition = `border-color ${transitionDuration}s`;
   const opacityTraisition = opacityTransitionWithTime(transitionDuration);
-  const fasterOpacityTraisition = opacityTransitionWithTime(0.3);
+  const fasterOpacityTraisition = opacityTransitionWithTime(transitionDuration);
 
   document.body.style.transition = `${bgTransition}, ${fontColorTransition}`;
   document.getElementById("quote-box").style.transition = fontColorTransition;
