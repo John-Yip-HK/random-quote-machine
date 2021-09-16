@@ -95,22 +95,25 @@ const changeIconMargin = () => {
   }
 };
 
+const opacityTransitionWithTime = (time) => `opacity ${time}s`;
+
 // Init function.
 window.onload = () => {
-  const bgTransition = `background-color ${transitionDuration}s`;
+  const bgTransition = `background ${transitionDuration}s`;
   const fontColorTransition = `color ${transitionDuration}s`;
-  const borderColorTransition = `border-color ${transitionDuration}`;
-  const opacityTraisition = `opacity ${transitionDuration}s`;
+  const borderColorTransition = `border-color ${transitionDuration}s`;
+  const opacityTraisition = opacityTransitionWithTime(transitionDuration);
+  const fasterOpacityTraisition = opacityTransitionWithTime(0.3);
 
   document.body.style.transition = `${bgTransition}, ${fontColorTransition}`;
   document.getElementById("quote-box").style.transition = fontColorTransition;
   document.getElementById(
     "new-quote"
-  ).style.transition = `${bgTransition}, ${borderColorTransition}, opacity 0.3s`;
+  ).style.transition = `${bgTransition}, ${borderColorTransition}, ${fasterOpacityTraisition}, box-shadow 0.1s`;
   textElement.style.transition = opacityTraisition;
   authorElement.style.transition = opacityTraisition;
   for (let icon of document.getElementsByClassName("fab")) {
-    icon.style.transition = `opacity 0.3s, ${fontColorTransition}`;
+    icon.style.transition = `${fasterOpacityTraisition}, ${fontColorTransition}`;
   }
 
   window.addEventListener("resize", changeIconMargin);
@@ -126,7 +129,7 @@ const genPost = (element) => {
   if (element.id === "tweet-quote") {
     element.setAttribute(
       "href",
-      element.href + `?text=${parsedQuote}&hashtags=${parsedAuthor}`
+      `https://twitter.com/intent/tweet?text=${parsedQuote}&hashtags=${parsedAuthor}`
     );
   } else if (element.id === "tumblr-quote") {
     const date = new Date();

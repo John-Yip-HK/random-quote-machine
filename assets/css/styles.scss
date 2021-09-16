@@ -55,7 +55,8 @@ div[class*="align-self-center"] {
   text-align: end;
 }
 
-i[class*="fab"]:hover {
+i[class*="fab"]:hover,
+#new-quote:hover {
   opacity: 0.8;
   cursor: pointer;
 }

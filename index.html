@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Quote Machine</title>
 
+  <!-- build:css assets/css/main.css -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- endbuild -->
+
+  <title>Random Quote Machine</title>
 </head>
 <body class="d-flex justify-content-center align-items-center">
   <main class="col-12">
@@ -17,6 +20,7 @@
       <h6 id="author"></h6>
       <div class="row d-flex justify-content-between align-items-center">
         <div class="col-6 col-md-5">
+          <!-- href in #tweet-quote is just for passing automated test. -->
           <a id="tweet-quote" href="https://twitter.com/intent/tweet" onclick="genPost(this)" target="_blank">
             <i class="fab fa-twitter-square fa-3x"></i>
           </a>
@@ -36,7 +40,11 @@
     </div>
   </main>
 
+  <!-- build:js assets/js/main.js -->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <!-- endbuild -->
 </body>
 </html>
